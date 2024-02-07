@@ -120,14 +120,14 @@ Module Css in React(folder)
 - JSX & JS
 - sass with react
   ```
-  - // src/scss/_reset.scss
+   // src/scss/_reset.scss
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-  - // src/scss/_variables.scss
+   // src/scss/_variables.scss
        //? Colors
       $navyBlue: #042940;
       $darkGreen: #005c53;
@@ -135,14 +135,14 @@ Module Css in React(folder)
       $neon: #dbf227;
       $beige: #d6d58e;
   
-  - // src/scss/app.scss
+   // src/scss/app.scss
   
     @import "reset", "variables";
     body {
         background-color:$beige;
         text-align: center;
         }
-  - // src/App.jsx
+   // src/App.jsx
      import "./scss/app.scss";
 
   ```
@@ -151,7 +151,7 @@ Module Css in React(folder)
 
 - Module.css with react
   ```
-  - // src/scss/card.module.scss
+   // src/scss/card.module.scss
   .container {
     .card {
         box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4);
@@ -164,7 +164,7 @@ Module Css in React(folder)
             color: red;
         }
    }
-  - // src/components/Card.jsx
+   // src/components/Card.jsx
   
       import CardStyle from "../scss/card.module.scss";
       
@@ -198,6 +198,7 @@ Module Css in React(folder)
   ```
 - Component icinde json datayi map() leme
    ```
+   // src/components/Card.jsx
    import CardStyle from "../scss/card.module.scss";
 
           const Card = ({ data }) => {
