@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sass---module.scss/static/css/main.855eabe5.css",
+    "main.js": "/sass---module.scss/static/js/main.a18e3543.js",
+    "index.html": "/sass---module.scss/index.html",
+    "main.855eabe5.css.map": "/sass---module.scss/static/css/main.855eabe5.css.map",
+    "main.a18e3543.js.map": "/sass---module.scss/static/js/main.a18e3543.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.855eabe5.css",
+    "static/js/main.a18e3543.js"
+  ]
+}
