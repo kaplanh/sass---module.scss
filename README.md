@@ -11,6 +11,7 @@
 |React - props|[Visit me on Linkedin](https://www.linkedin.com/in/kaplan-h/)|
 |React - sass||   
 |React - module.scss||   
+|Deploy | with GitHub Pages|   
   
 
 <br/>
@@ -228,6 +229,63 @@ Module Css in React(folder)
           
           export default Card;
   ```
+- Deploy with GitHub Pages
+  
+-    ### 💻 write in Terminal 👇
+
+```bash
+// src
+ npm i gh-pages or yarn add gh-pages
+```
+
+-    ### 💻  add this in scripts: "predeploy": "yarn run build",  "deploy": "gh-pages -d build" // if you use npm: "predeploy": "npm run build","deploy": "gh-pages -d build" 👇
+
+  ```sh
+// src/package.json
+
+  "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "predeploy": "yarn run build", 
+        "deploy": "gh-pages -d build"
+    },
+```
+   
+   ### 💻  add github.io link as homepage:  "homepage": "https://kaplanh.github.io/sass---module.scss"  👇
+
+```bash
+// src/package.json
+ {
+    "homepage": "https://kaplanh.github.io/sass---module.scss",
+    "name": "sass---module.scss",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "gh-pages": "^6.1.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "sass": "^1.70.0"
+    },
+```
+
+
+
+-    ### 💻  write in Terminal 👇
+
+  ```sh
+    yarn run deploy  or npm run deploy
+  ```
+
+-    ### 💻  visit your page link 👇
+
+  ```sh
+   https://kaplanh.github.io/sass---module.scss
+ ```
+
+
   
 
  
