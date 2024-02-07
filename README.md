@@ -2,7 +2,7 @@
 
 
 
-[:point_right: Click here to see on browser](https://modulecss.vercel.app/ )
+[:point_right: Click here to see on browser](https://kaplanh.github.io/sass---module.scss/)
 
  **What's used in this app ?** |  **Author** |
 |----------|------------|
