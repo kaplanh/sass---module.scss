@@ -1,6 +1,6 @@
 # Module Css in React
 
-![modulecss](https://github.com/kaplanh/clarusway-full-stack-tr-14-Frontend-/assets/101884444/bb4e4f2b-3b25-4c98-a843-02fbae824c33)
+
 
 [:point_right: Click here to see on browser](https://modulecss.vercel.app/ )
 
@@ -8,7 +8,8 @@
 |----------|------------|
 |React - component |[Take a look at my portfolio](https://kaplanh.github.io/Portfolio_with_CssFlex/)|
 |React - props|[Visit me on Linkedin](https://www.linkedin.com/in/kaplan-h/)|
-|React - module.css||   
+|React - sass||   
+|React - module.scss||   
   
 
 <br/>
@@ -21,6 +22,11 @@
 
 ```bash
 yarn create react-app .  or npx create-react-app .
+```
+### 💻 Install Sass 👇
+
+```bash
+yarn add sass  or npm i sass
 ```
 
 ## 🔴 Delete these files and delete the imports👇
@@ -76,22 +82,30 @@ Module Css in React(folder)
 |----public (folder)
 │     └── index.html
 |----src (folder)
-|    |--components (folder)
-│    │       ├── buton (folder)
-│    │       │     ├── Button.js
-│    │       │     ├── Buton.module.css
-│    │       │     
-│    │       ├── card (folder)
-│    │             ├── Card.jsx
-│    │             └── Card.module.css
-│    │       
-│    ├
-│    ├── App.js
-│    │── data.js
-│    └── index.js
+|    |--- components (folder)
+│    │       ├── Card.js
+│    │       ├── Footer.js
+│    │       ├── Header.js
+│    │         
+│    │          
+│    │          
+│    │      
+│    │            
+│    │             
+│    |--- scss (folder)
+|    |      ├── _reset.scss
+|    |      ├── _variables.scss
+|    |      ├── app.scss
+|    |      ├── card.module.scss
+|    |      ├── footer.module.scss
+|    |      ├── header.module.scss
+│    |
+│    ├--- App.js
+│    │--- data.js
+│    └--- index.js
 │
 │
-|── .gitignore
+|--- .gitignore
 |── package-lock.json
 ├── package.json
 |── README.md
@@ -103,9 +117,116 @@ Module Css in React(folder)
 
 - Component
 - JSX & JS
-- Inline Styling
-- Props drilling
-- Module.css
+- sass with react
+  ```
+  - // src/scss/_reset.scss
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+  - // src/scss/_variables.scss
+       //? Colors
+      $navyBlue: #042940;
+      $darkGreen: #005c53;
+      $olive: #9fc131;
+      $neon: #dbf227;
+      $beige: #d6d58e;
+  
+  - // src/scss/app.scss
+  
+    @import "reset", "variables";
+    body {
+        background-color:$beige;
+        text-align: center;
+        }
+  - // src/App.jsx
+     import "./scss/app.scss";
+
+  ```
+   
+
+
+- Module.css with react
+  ```
+  - // src/scss/card.module.scss
+  .container {
+    .card {
+        box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4);
+
+        max-width: 300px;
+        margin: 2rem auto;
+        border-radius: 1rem;
+        padding: 1rem;
+        h1 {
+            color: red;
+        }
+   }
+  - // src/components/Card.jsx
+  
+      import CardStyle from "../scss/card.module.scss";
+      
+      const Card = ({ data }) => {
+          console.log(data);
+          //? js
+          return (
+              <div className={CardStyle.container}>
+                  {data.map((item) => {
+                      //? JS
+                      const { id, name, job, img, comment } = item;
+                      return (
+                          <div key={id} className={CardStyle.card}>
+                              <h1>{name}</h1>
+                              <h3>{job}</h3>
+                              <p>{comment}</p>
+                              <img src={img} alt="img" />
+                              <div className={CardStyle.buttons}>
+                                  <button className={CardStyle.small}>Small</button>
+                                  <button className={CardStyle.large}>Large</button>
+                              </div>
+                          </div>
+                      );
+                  })}
+              </div>
+          );
+      };
+      
+      export default Card;
+
+  ```
+- Component icinde json datayi map() leme
+   ```
+   import CardStyle from "../scss/card.module.scss";
+
+          const Card = ({ data }) => {
+              console.log(data);
+              //? js
+              return (
+                  <div className={CardStyle.container}>
+                      {data.map((item) => {
+                          //? JS
+                          const { id, name, job, img, comment } = item;
+                          return (
+                              <div key={id} className={CardStyle.card}>
+                                  <h1>{name}</h1>
+                                  <h3>{job}</h3>
+                                  <p>{comment}</p>
+                                  <img src={img} alt="img" />
+                                  <div className={CardStyle.buttons}>
+                                      <button className={CardStyle.small}>Small</button>
+                                      <button className={CardStyle.large}>Large</button>
+                                  </div>
+                              </div>
+                          );
+                      })}
+                  </div>
+              );
+          };
+          
+          export default Card;
+  ```
+  
 
  
 
