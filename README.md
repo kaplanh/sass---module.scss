@@ -1,9 +1,10 @@
 # Sass & Module.scss with React
 
+[:point_right: Click here to see on browser](https://kaplanh.github.io/sass---module.scss/)
+
 ![sass   module scss with react](https://github.com/kaplanh/sass---module.scss/assets/101884444/6a01c757-7099-4123-903c-d60ab7ec217e)
 
 
-[:point_right: Click here to see on browser](https://kaplanh.github.io/sass---module.scss/)
 
  **What's used in this app ?** |  **Author** |
 |----------|------------|
@@ -11,7 +12,7 @@
 |React - props|[Visit me on Linkedin](https://www.linkedin.com/in/kaplan-h/)|
 |React - sass||   
 |React - module.scss||   
-|Deploy | with GitHub Pages|   
+|Deploy with GitHub Pages | |   
   
 
 <br/>
